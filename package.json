@@ -1,0 +1,21 @@
+{
+  "name": "opensincera-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the OpenSincera API: publisher ad-experience benchmarks for Claude and other MCP clients.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "tsx src/stdio.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "tsx": "^4.19.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}

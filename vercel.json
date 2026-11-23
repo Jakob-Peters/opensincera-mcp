@@ -1,0 +1,17 @@
+{
+  "buildCommand": "echo 'no build step — Vercel compiles api/ functions'",
+  "outputDirectory": ".",
+  "functions": { "api/mcp.ts": { "maxDuration": 60 } },
+  "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,POST,DELETE" },
+        { "key": "Access-Control-Allow-Headers", "value": "Authorization, Content-Type, Accept, Mcp-Session-Id, MCP-Protocol-Version, Last-Event-ID" },
+        { "key": "Access-Control-Expose-Headers", "value": "Mcp-Session-Id, WWW-Authenticate" }
+      ]
+    }
+  ]
+}
